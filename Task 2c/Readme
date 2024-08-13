@@ -1,0 +1,28 @@
+1. arena_image(arena_path):
+   - Reads an image from the specified path using OpenCV's `imread`.
+   - Resizes the image to a fixed size of 700x700 pixels using `cv.resize`.
+   - Returns the resized image as a NumPy array.
+
+2. augment_image(image):
+   - Enhances image quality through various techniques:
+     - Sharpening the image.
+     - Reducing noise with Gaussian blur.
+     - Performing histogram equalization (for grayscale images).
+     - Adjusting brightness and contrast.
+   - Returns the augmented image.
+
+3. event_identification(arena):
+   - Identifies events in the arena image:
+     - Converts the image to grayscale.
+     - Applies thresholding to create a binary image.
+     - Detects contours in the binary image.
+     - Filters contours based on area and aspect ratio.
+     - Crops and resizes potential event images.
+   - Returns a list of identified event images.
+
+4. classify_event:
+   - Classifies the type of event in an image using a pre-trained deep learning model:
+     - Loads the model.
+     - Preprocesses the input image.
+     - Makes predictions using the model.
+     - Determines the predicted class and returns the detected event as a string.

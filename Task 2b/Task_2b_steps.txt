@@ -1,0 +1,15 @@
+Team ID = 1373
+Trained weights drive link = "https://drive.google.com/drive/folders/1whEcBfdy5u9P_a_ZisM0y8wGee7_8G1q?usp=drive_link"
+
+###############################################################################
+'''
+Please write the complete steps taken by your team explaining how you completed Task 2B. It is adviced to be as elaborate as possible.
+
+1. We imported libraries at first of tensorflow and keras
+2. Defined the directory path of the dataset, also took the different file extensions list and specified the image size
+3. We splited the dataset into train and validation set.
+4. One hot encoded the class labels
+5. Used a Pre-trained model(resnet model), created a sequential model and freezed the layers 
+6. Compiled the model using Adam and used loss function as categorical_crossentropy
+7. Trained the model with 10 epochs
+8. Saved the model.
